@@ -1,0 +1,35 @@
+//
+//  Sina.pch
+//  Sina
+//
+//  Created by James on 3/5/15.
+//  Copyright (c) 2015 James. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import "UIImage+Image.h"
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Item.h"
+
+#define KeyWindow [UIApplication sharedApplication].keyWindow
+
+#ifdef DEBUG // 调试
+
+#define kLog(...) NSLog(__VA_ARGS__)
+
+#else // 发布
+
+#define kLog(...)
+
+#endif
+
+/** 自定义cell */
+#define kStatusCellMargin 10
+#define kNameFont [UIFont systemFontOfSize:13]
+#define kTimeFont [UIFont systemFontOfSize:12]
+#define kSourceFont kTimeFont
+#define kTextFont [UIFont systemFontOfSize:15]
+#define kScreenW [UIScreen mainScreen].bounds.size.width
+
+#endif
